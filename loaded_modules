@@ -1,0 +1,72 @@
+Module                  Size  Used by
+iptable_security       12705  0 
+ext4                  583541  1 
+mbcache                14958  1 ext4
+jbd2                  102945  1 ext4
+rpcrdma                90366  0 
+sunrpc                334343  1 rpcrdma
+ib_isert               55484  0 
+iscsi_target_mod      298112  1 ib_isert
+ib_iser                47796  0 
+libiscsi               57233  1 ib_iser
+scsi_transport_iscsi    99909  2 ib_iser,libiscsi
+ib_srpt                47966  0 
+target_core_mod       371914  3 iscsi_target_mod,ib_srpt,ib_isert
+ib_srp                 48464  0 
+scsi_transport_srp     21089  1 ib_srp
+ib_ipoib               91950  0 
+rdma_ucm               26837  0 
+ib_ucm                 22585  0 
+ib_uverbs              51854  2 ib_ucm,rdma_ucm
+ib_umad                22129  0 
+rdma_cm                53755  4 rpcrdma,ib_iser,rdma_ucm,ib_isert
+ib_cm                  47149  5 rdma_cm,ib_srp,ib_ucm,ib_srpt,ib_ipoib
+iw_cm                  46022  1 rdma_cm
+dm_mirror              22135  0 
+dm_region_hash         20862  1 dm_mirror
+dm_log                 18411  2 dm_region_hash,dm_mirror
+dm_mod                114430  2 dm_log,dm_mirror
+intel_powerclamp       14419  0 
+iosf_mbi               13523  0 
+crc32_pclmul           13113  0 
+ghash_clmulni_intel    13259  0 
+aesni_intel            69884  0 
+sg                     40721  0 
+lrw                    13286  1 aesni_intel
+gf128mul               14951  1 lrw
+glue_helper            13990  1 aesni_intel
+ablk_helper            13597  1 aesni_intel
+i2c_piix4              22106  0 
+cryptd                 20359  3 ghash_clmulni_intel,aesni_intel,ablk_helper
+i2c_core               40756  1 i2c_piix4
+pcspkr                 12718  0 
+ip_tables              27115  1 iptable_security
+xfs                   985347  2 
+libcrc32c              12644  1 xfs
+sd_mod                 46322  5 
+crc_t10dif             12714  2 target_core_mod,sd_mod
+crct10dif_generic      12647  0 
+ata_generic            12910  0 
+pata_acpi              13038  0 
+hv_storvsc             22716  3 
+scsi_transport_fc      64056  1 hv_storvsc
+hv_network_direct     100288  0 
+hv_utils               25798  2 
+ptp                    19231  1 hv_utils
+ib_core               210381  14 rdma_cm,ib_cm,iw_cm,rpcrdma,ib_srp,ib_ucm,ib_iser,ib_srpt,ib_umad,hv_network_direct,ib_uverbs,rdma_ucm,ib_ipoib,ib_isert
+hv_netvsc              45074  0 
+pps_core               19106  1 ptp
+hyperv_keyboard        12777  0 
+scsi_tgt               20027  2 scsi_transport_fc,scsi_transport_srp
+hid_hyperv             13108  0 
+hv_balloon             22073  0 
+crct10dif_pclmul       14289  1 
+crct10dif_common       12595  3 crct10dif_pclmul,crct10dif_generic,crc_t10dif
+ata_piix               35038  0 
+hyperv_fb              17769  1 
+crc32c_intel           22079  1 
+libata                247095  3 pata_acpi,ata_generic,ata_piix
+serio_raw              13462  0 
+hv_vmbus               72748  8 hv_balloon,hyperv_keyboard,hv_netvsc,hid_hyperv,hv_utils,hyperv_fb,hv_storvsc,hv_network_direct
+fjes                   32197  0 
+floppy                 69417  0 
